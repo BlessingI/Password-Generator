@@ -40,13 +40,54 @@ function writePassword() {
                 confirmNumber = confirm('Will this contain numbers?')
                 if(confirmNumber){
                     //if it contains lowercase but no uppercase and number
+                    confirmSpecialCharacter =confirm('Will this contain special characters?')
+                    if(confirmSpecialCharacter){
+                        //if it contains lowercase but no uppercase and number and specialcharacter
+                        alert('This password contains lowercase, no uppercase, number and special character')
+                    } else {
+                         //if it contains lowercase but no uppercase and number and no specialcharacter
+                         alert('This password contains lowercase, no uppercase, number and no special character')
+                    }
+                    
                 } else {
                     //if it contains lowercase but no uppercase and no number
+                    confirmSpecialCharacter =confirm('Will this contain special characters?')
+                    if(confirmSpecialCharacter){
+                       //if it contains lowercase but no uppercase and no number and contains special character 
+                       alert('This password contains lowercase, no uppercase, no number and special character')
+                    } else {
+                        //if it contains lowercase but no uppercase and no number and contains no special character
+                        alert('This password contains lowercase, no uppercase, no number and no special character')
+                    }
+
                 }
 
             }
         } else {
-            //if confirm lowercase is false, check if confirmUpperCaseb is true
+            //if confirm lowercase is false, UpperCase is true
+            confirmNumber = confirm('Will this contain numbers?')
+            if(confirmNumber){
+                //if confirm lowercase is false, UpperCase is true, confirmnumber is true
+                confirmSpecialCharacter =confirm('Will this contain special characters?')
+                if(confirmSpecialCharacter){
+                  //if confirm lowercase is false, UpperCase is true, confirmnumber is true, specialcharacter is true
+                  alert('This password contains no lowercase,uppercase,number and special character')
+
+                } else {
+                     //if confirm lowercase is false, UpperCase is true, confirmnumber is true, specialcharacter is false
+                     alert('This password contains no lowercase,uppercase,number and no special character')
+                }
+            } else {
+                //if confirm lowercase is false, UpperCase is true, confirmnumber is false
+                confirmSpecialCharacter =confirm('Will this contain special characters?')
+                if(confirmSpecialCharacter){
+                     //if confirm lowercase is false, UpperCase is true, confirmnumber is false, specialcharacter is true
+                     alert('This password has no lowercase, has uppercase, no number, has specialcharacter')
+                } else {
+                    //if confirm lowercase is false, UpperCase is true, confirmnumber is false, specialcharacter is false
+                    alert('This password has no lowercase, has uppercase, no number, no specialcharacter')
+                }
+            }
             
         }
 
