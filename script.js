@@ -22,15 +22,32 @@ function writePassword() {
                         alert("The password")
                     } else {
                         //if it contains lowercase, uppercase, number but no special character
+                        alert("The password without special character")
                     }
                 } else {
                     //if it contains lowercase, uppercase but no number
+                    confirmSpecialCharacter =confirm('Will this contain special characters?')
+                    if(confirmSpecialCharacter){
+                        //if it contains lowercase, uppercase but no number and special cha
+                        alert("This password contains lowercase, uppercase, no number and special character")
+                    } else {
+                        //if it contains lowercase, uppercase but no number and no special c
+                        alert("This password contains lowercase, uppercase, no number and no special character")
+                    }
                 }
             } else {
                 //if it contains lowercase but no uppercase
+                confirmNumber = confirm('Will this contain numbers?')
+                if(confirmNumber){
+                    //if it contains lowercase but no uppercase and number
+                } else {
+                    //if it contains lowercase but no uppercase and no number
+                }
+
             }
         } else {
             //if confirm lowercase is false, check if confirmUpperCaseb is true
+            
         }
 
 
