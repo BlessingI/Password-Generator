@@ -64,30 +64,60 @@ function writePassword() {
 
             }
         } else {
-            //if confirm lowercase is false, UpperCase is true
-            confirmNumber = confirm('Will this contain numbers?')
-            if(confirmNumber){
-                //if confirm lowercase is false, UpperCase is true, confirmnumber is true
-                confirmSpecialCharacter =confirm('Will this contain special characters?')
-                if(confirmSpecialCharacter){
-                  //if confirm lowercase is false, UpperCase is true, confirmnumber is true, specialcharacter is true
-                  alert('This password contains no lowercase,uppercase,number and special character')
-
+            //if confirm lowercase is false
+            confirmUpperCase = confirm('Will this contain uppercase letters?')
+            if(confirmUpperCase){
+                //if confirm lowercase is false, uppercase is true
+                confirmNumber = confirm('Will this contain numbers?')
+                if(confirmNumber){
+                     //if confirm lowercase is false, uppercase is true, number is true
+                     confirmSpecialCharacter =confirm('Will this contain special characters?')
+                     if(confirmSpecialCharacter){
+                         //if confirm lowercase is false, uppercase is true, number is true, specialcharacter is true
+                         alert('This password has no lowercase, has uppercase, has number, has special character')
+                     } else {
+                        //if confirm lowercase is false, uppercase is true, number is true, specialcharacter is false
+                        alert('This password has no lowercase, has uppercase, has number, has no special character')
+                     }
                 } else {
-                     //if confirm lowercase is false, UpperCase is true, confirmnumber is true, specialcharacter is false
-                     alert('This password contains no lowercase,uppercase,number and no special character')
+                     //if confirm lowercase is false, uppercase is true, number is not true
+                     confirmSpecialCharacter =confirm('Will this contain special characters?')
+                     if(confirmSpecialCharacter){
+                         //if confirm lowercase is false, uppercase is true, number is false and special cha is true
+                         alert('This password has no lowercase, uppercase, no number, has special cha')
+                     } else {
+                         //if confirm lowercase is false, uppercase is true, number is not true and special cha is not true
+                         alert('This password has no lowercase, uppercase, no number, has no special cha')
+                     }
                 }
             } else {
-                //if confirm lowercase is false, UpperCase is true, confirmnumber is false
-                confirmSpecialCharacter =confirm('Will this contain special characters?')
-                if(confirmSpecialCharacter){
-                     //if confirm lowercase is false, UpperCase is true, confirmnumber is false, specialcharacter is true
-                     alert('This password has no lowercase, has uppercase, no number, has specialcharacter')
+                //if confirm lowercase is false, uppercase is false
+                confirmNumber = confirm('Will this contain numbers?')
+                if(confirmNumber) {
+                    //if confirm lowercase is false, uppercase is false, num is true
+                    confirmSpecialCharacter =confirm('Will this contain special characters?')
+                    if(confirmSpecialCharacter){
+                         //if confirm lowercase is false, uppercase is false, num is true, special ch is true
+                         alert('This password has no lowercase, no uppercase, num is true special cha is true')
+
+                    } else {
+                        //if confirm lowercase is false, uppercase is false, num is true, special ch is false
+                        alert('This password has no lowercase, no uppercase, num is true, special cha is false')
+                    }
+
                 } else {
-                    //if confirm lowercase is false, UpperCase is true, confirmnumber is false, specialcharacter is false
-                    alert('This password has no lowercase, has uppercase, no number, no specialcharacter')
+                    //if confirm lowercase is false, uppercase is false, num is false
+                    confirmSpecialCharacter =confirm('Will this contain special characters?')
+                    if(confirmSpecialCharacter){
+                       //if confirm lowercase is false, uppercase is false, num is false, specialchar is true
+                       alert('This password has no lowercase, no uppercase, no number and special char is true')
+                    } else {
+                        //if confirm lowercase is false, uppercase is false, num is false, specialchar is false
+                        alert('This password has no lowercase, no uppercase, no number and special char is false')
+                    }
                 }
             }
+
             
         }
 
@@ -96,7 +126,9 @@ function writePassword() {
 
   } else if(promptPassword < 8 || promptPassword > 128) {
       alert('You must choose between 8 and 128')
-  } 
+  } else {
+      alert('You must choose between 8 and 128')
+  }
 
 
 
