@@ -12,7 +12,7 @@ function lowerCaseF(length) {
     return result;
 }
 
-let allPasswordMix = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$&%!~'
+let allPasswordMix = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$&%!{}~!#$%&()*+-./:;<=>?@[\\]^_`{|}~'
 function allPasswordMixF(length) {
     let result = ' ';
     const charactersLength = allPasswordMix.length;
@@ -23,7 +23,7 @@ function allPasswordMixF(length) {
     return result;
 }
 
-let uppercaseNumberSpecialcharacter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$&%!~'
+let uppercaseNumberSpecialcharacter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$&%!~!#$%&()*+-./:;<=>?@[\\]^_`{|}~'
 function uppercaseNumberSpecialcharacterF(length) {
     let result = ' ';
     const charactersLength = uppercaseNumberSpecialcharacter.length;
@@ -34,7 +34,7 @@ function uppercaseNumberSpecialcharacterF(length) {
     return result;
 }
 
-let lowercaseSpecialcharacter = 'abcdefghijklmnopqrstuvwxyz@#$&%!~'
+let lowercaseSpecialcharacter = 'abcdefghijklmnopqrstuvwxyz@#$&%!~!#$%&()*+-./:;<=>?@[\\]^_`{|}~'
 function lowercaseSpecialcharacterF(length) {
     let result = ' ';
     const charactersLength = lowercaseSpecialcharacter.length;
@@ -45,7 +45,7 @@ function lowercaseSpecialcharacterF(length) {
     return result;
 }
 
-let specialcharacter = '@#$&%!~'
+let specialcharacter = '!#$%&()*+-./:;<=>?@[\\]^_`{|}~'
 function specialcharacterF(length){
     let result = ' ';
     const charactersLength = specialcharacter.length;
@@ -56,7 +56,7 @@ function specialcharacterF(length){
     return result;
 }
 
-let numSpecialChar = '0123456789@#$&%!~'
+let numSpecialChar = '0123456789@#$&%!~!#$%&()*+-./:;<=>?@[\\]^_`{|}~'
 function numSpecialCharF(length){
     let result = ' ';
     const charactersLength = numSpecialChar.length;
@@ -89,7 +89,7 @@ function uppercaseF(length){
     return result;
 }
 
-var uppercaseSpecialchar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$&%!~'
+var uppercaseSpecialchar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$&%!~!#$%&()*+-./:;<=>?@[\\]^_`{|}~'
 function uppercaseSpecialcharF(length){
     let result = ' ';
     const charactersLength = uppercaseSpecialchar.length;
@@ -122,7 +122,7 @@ function lowercaseNumberF(length){
     return result;
 }
 
-var lowercaseNumberSpecialchar = 'abcdefghijklmnopqrstuvwxyz0123456789@#$&%!~'
+var lowercaseNumberSpecialchar = 'abcdefghijklmnopqrstuvwxyz0123456789@#$&%!~!#$%&()*+-./:;<=>?@[\\]^_`{|}~'
 function lowercaseNumberSpecialcharF(length){
     let result = ' ';
     const charactersLength = lowercaseNumberSpecialchar.length;
@@ -144,7 +144,7 @@ function lowercaseUppercaseF(length){
     return result;
 }
 
-var lowercaseUppercaseSpecialcharacter = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#$&%!~"
+var lowercaseUppercaseSpecialcharacter = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#$&%!~!#$%&()*+-./:;<=>?@[\\]^_`{|}~"
 function lowercaseUppercaseSpecialcharacterF(length){
     let result = ' ';
     const charactersLength = lowercaseUppercaseSpecialcharacter.length;
@@ -187,20 +187,20 @@ function writePassword() {
                     var confirmSpecialCharacter =confirm('Will this contain special characters?')
                     if(confirmSpecialCharacter){
                         //if it contains lowercase, uppercase, number and special character
-                        alert(allPasswordMixF(password_length))
+                        document.getElementById("password").innerHTML = allPasswordMixF(password_length)
                     } else {
                         //if it contains lowercase, uppercase, number but no special character
-                        alert(lowercaseUppercaseNumberF(password_length))
+                        document.getElementById("password").innerHTML = lowercaseUppercaseNumberF(password_length)
                     }
                 } else {
                     //if it contains lowercase, uppercase but no number
                     confirmSpecialCharacter =confirm('Will this contain special characters?')
                     if(confirmSpecialCharacter){
                         //if it contains lowercase, uppercase but no number and special cha
-                        alert(lowercaseUppercaseSpecialcharacterF(password_length))
+                        document.getElementById("password").innerHTML = lowercaseUppercaseSpecialcharacterF(password_length)
                     } else {
                         //if it contains lowercase, uppercase but no number and no special c
-                        alert(lowercaseUppercaseF(password_length))
+                        document.getElementById("password").innerHTML = lowercaseUppercaseF(password_length)
                     }
                 }
             } else {
@@ -211,10 +211,10 @@ function writePassword() {
                     confirmSpecialCharacter =confirm('Will this contain special characters?')
                     if(confirmSpecialCharacter){
                         //if it contains lowercase but no uppercase and number and specialcharacter
-                        alert(lowercaseNumberSpecialcharF(password_length))
+                        document.getElementById("password").innerHTML = lowercaseNumberSpecialcharF(password_length)
                     } else {
                          //if it contains lowercase but no uppercase and number and no specialcharacter
-                         alert(lowercaseNumberF(password_length))
+                         document.getElementById("password").innerHTML = lowercaseNumberF(password_length)
                     }
                     
                 } else {
@@ -222,10 +222,10 @@ function writePassword() {
                     confirmSpecialCharacter =confirm('Will this contain special characters?')
                     if(confirmSpecialCharacter){
                        //if it contains lowercase but no uppercase and no number and contains special character 
-                       alert(lowercaseSpecialcharacterF(password_length))
+                       document.getElementById("password").innerHTML = lowercaseSpecialcharacterF(password_length)
                     } else {
                         //if it contains lowercase but no uppercase and no number and contains no special character
-                        alert(lowerCaseF(password_length))
+                        document.getElementById("password").innerHTML = lowerCaseF(password_length)
                     }
 
                 }
@@ -242,20 +242,20 @@ function writePassword() {
                      confirmSpecialCharacter =confirm('Will this contain special characters?')
                      if(confirmSpecialCharacter){
                          //if confirm lowercase is false, uppercase is true, number is true, specialcharacter is true
-                         alert(uppercaseNumberSpecialcharacterF(password_length))
+                         document.getElementById("password").innerHTML = uppercaseNumberSpecialcharacterF(password_length)
                      } else {
                         //if confirm lowercase is false, uppercase is true, number is true, specialcharacter is false
-                        alert(uppercaseNumberF(password_length))
+                        document.getElementById("password").innerHTML = uppercaseNumberF(password_length)
                      }
                 } else {
                      //if confirm lowercase is false, uppercase is true, number is not true
                      confirmSpecialCharacter =confirm('Will this contain special characters?')
                      if(confirmSpecialCharacter){
                          //if confirm lowercase is false, uppercase is true, number is false and special cha is true
-                         alert(uppercaseSpecialcharF(password_length))
+                         document.getElementById("password").innerHTML = uppercaseSpecialcharF(password_length)
                      } else {
                          //if confirm lowercase is false, uppercase is true, number is not true and special cha is not true
-                         alert(uppercaseF(password_length))
+                         document.getElementById("password").innerHTML = uppercaseF(password_length);
                      }
                 }
             } else {
@@ -266,11 +266,11 @@ function writePassword() {
                     confirmSpecialCharacter =confirm('Will this contain special characters?')
                     if(confirmSpecialCharacter){
                          //if confirm lowercase is false, uppercase is false, num is true, special ch is true
-                         alert(numSpecialCharF(password_length))
+                         document.getElementById("password").innerHTML = numSpecialCharF(password_length)
 
                     } else {
                         //if confirm lowercase is false, uppercase is false, num is true, special ch is false
-                        alert(numbersF(password_length))
+                        document.getElementById("password").innerHTML = numbersF(password_length)
                     }
 
                 } else {
@@ -278,7 +278,7 @@ function writePassword() {
                     confirmSpecialCharacter =confirm('Will this contain special characters?')
                     if(confirmSpecialCharacter){
                        //if confirm lowercase is false, uppercase is false, num is false, specialchar is true
-                       alert(specialcharacterF(password_length))
+                       document.getElementById("password").innerHTML = specialcharacterF(password_length)
                     } else {
                         //if confirm lowercase is false, uppercase is false, num is false, specialchar is false
                         alert('You must choose a criteria')
@@ -297,10 +297,10 @@ function writePassword() {
 
 
 
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
 }
 
